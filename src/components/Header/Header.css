@@ -1,0 +1,76 @@
+.header {
+  height: 34vw;
+  width: 100%; /* or any valid width */
+  background: url('./header_img.png') no-repeat;
+  background-size: cover; /* better than contain for full coverage */
+  background-position: center;
+  position: relative;
+  color: white; /* ✅ make text white */
+}
+
+.header-content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1.5vw;
+  max-width: 50%;
+  bottom: 10%;
+  left: 6vw;
+  animation: fadeIn 2s;
+}
+.header-content h2{
+    font-weight: 500;
+    color: white;
+    font-size: max(4.5vw,22px);
+}
+.header-content p{
+    color: white;
+    font-size:1vw;
+}
+.header-content button{
+border: none;
+color: black;
+font-weight: 500;
+padding: 1vw 2.3vw;
+background-color: white;
+font-size: max(1vw,13px);
+border-radius: 50px;
+}
+/* Desktop Default */
+.header-content {
+  max-width: 60%;
+}
+
+/* Between 1050px and 850px — adjust layout gradually */
+@media (max-width: 1050px) and (min-width: 851px) {
+  .header-content {
+    max-width: 75%;
+  }
+}
+
+/* Medium screens: 850px and below */
+@media (max-width: 850px) and (min-width: 651px) {
+  .header-content {
+    max-width: 85%;
+  }
+  .header-content p {
+    font-size: 14px;
+  }
+  .header-content button {
+    padding: 2vw 4vw;
+  }
+}
+
+/* Small screens: 650px and below */
+@media (max-width: 650px) {
+  .header-content {
+    max-width: 90%;
+  }
+  .header-content p {
+    display: none;
+  }
+  .header-content button {
+    padding: 3vw 6vw;
+  }
+}
