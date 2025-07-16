@@ -1,7 +1,7 @@
 .header {
   height: 34vw;
   width: 100%; /* or any valid width */
-  background: url('./header_img.png') no-repeat;
+  background: url('/public/header_img.png') no-repeat;
   background-size: cover; /* better than contain for full coverage */
   background-position: center;
   position: relative;
